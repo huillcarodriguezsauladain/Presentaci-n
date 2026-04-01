@@ -1,0 +1,56 @@
+/* =============================================
+   ESTILOS PERSONALIZADOS — Equipo Diseño de Software
+   Universidad Continental, Sede Cusco
+   ============================================= */
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* ------------------------------------------
+   Animaciones de entrada para las tarjetas
+   ------------------------------------------ */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    opacity: 0;
+}
+
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.2s; }
+.delay-3 { animation-delay: 0.3s; }
+.delay-4 { animation-delay: 0.4s; }
+
+/* ------------------------------------------
+   Animación de los orbes de fondo (blobs)
+   ------------------------------------------ */
+@keyframes blob {
+    0%   { transform: translate(0px,   0px)   scale(1);   }
+    33%  { transform: translate(40px, -50px)  scale(1.1); }
+    66%  { transform: translate(-20px, 30px)  scale(0.9); }
+    100% { transform: translate(0px,   0px)   scale(1);   }
+}
+
+.animate-blob         { animation: blob 8s infinite alternate ease-in-out; }
+.animation-delay-2000 { animation-delay: 2s; }
+.animation-delay-4000 { animation-delay: 4s; }
+
+/* ------------------------------------------
+   Animación de barras de progreso (skills)
+   ------------------------------------------ */
+@keyframes fillBar {
+    from { width: 0; }
+}
+
+.animate-fill {
+    animation: fillBar 1s ease-out forwards;
+}
+
+/* ------------------------------------------
+   Bloquear scroll cuando el modal está abierto
+   ------------------------------------------ */
+.no-scroll { overflow: hidden; }
